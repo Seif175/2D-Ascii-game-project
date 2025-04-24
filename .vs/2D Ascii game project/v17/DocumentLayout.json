@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\seife\\2D Ascii game project\\",
+  "WorkspaceRootPath": "C:\\Users\\seife\\2D-Ascii-game-project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BEA20AD4-CA15-46A4-AE9B-E390C88197DB}|2D Ascii game project.vcxproj|C:\\Users\\seife\\2D Ascii game project\\game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{BEA20AD4-CA15-46A4-AE9B-E390C88197DB}|2D Ascii game project.vcxproj|C:\\Users\\seife\\2D-Ascii-game-project\\game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{BEA20AD4-CA15-46A4-AE9B-E390C88197DB}|2D Ascii game project.vcxproj|solutionrelative:game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
@@ -20,11 +20,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "game.cpp",
-              "DocumentMoniker": "C:\\Users\\seife\\2D Ascii game project\\game.cpp",
+              "DocumentMoniker": "C:\\Users\\seife\\2D-Ascii-game-project\\game.cpp",
               "RelativeDocumentMoniker": "game.cpp",
-              "ToolTip": "C:\\Users\\seife\\2D Ascii game project\\game.cpp",
+              "ToolTip": "C:\\Users\\seife\\2D-Ascii-game-project\\game.cpp",
               "RelativeToolTip": "game.cpp",
-              "ViewState": "AgIAAE4AAAAAAAAAAAAAAGEAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAKQBAAAAAAAAAAAswMEBAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-04-22T16:17:35.927Z",
               "EditorCaption": ""
