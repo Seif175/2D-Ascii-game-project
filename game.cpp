@@ -2,22 +2,19 @@
 #include <conio.h>
 using namespace std;
 
-void drawsingleBullet(unsigned char screen[][156], int rH, int cH)
+void drawHeromoverightlegtor(unsigned char screen[][156], int rH, int cH)
 {
+    screen[rH][cH + 4] = '_';
     screen[rH][cH + 5] = '_';
     screen[rH][cH + 6] = '_';
     screen[rH][cH + 7] = '_';
     screen[rH][cH + 8] = '_';
     screen[rH + 1][cH + 3] = '/';
-    screen[rH + 1][cH + 4] = ' ';
-    screen[rH + 1][cH + 5] = ' ';
-    screen[rH + 1][cH + 6] = ' ';
-    screen[rH + 1][cH + 7] = ' ';
-    screen[rH + 1][cH + 8] = ' ';
     screen[rH + 1][cH + 9] = '\\';
     screen[rH + 2][cH + 2] = '|';
     screen[rH + 2][cH + 4] = 'o';
-    screen[rH + 2][cH + 6] = 'o';
+    screen[rH + 2][cH + 6] = '>';
+    screen[rH + 2][cH + 8] = 'o';
     screen[rH + 2][cH + 10] = '|';
     screen[rH + 3][cH + 2] = '|';
     screen[rH + 3][cH + 5] = '-';
@@ -28,19 +25,20 @@ void drawsingleBullet(unsigned char screen[][156], int rH, int cH)
     screen[rH + 4][cH + 5] = '_';
     screen[rH + 4][cH + 6] = '_';
     screen[rH + 4][cH + 7] = '_';
-    screen[rH + 4][cH + 10] = '/';
+    screen[rH + 4][cH + 11] = '/';
     screen[rH + 5][cH + 1] = '/';
     screen[rH + 5][cH + 2] = '|';
-    screen[rH + 5][cH + 9] = '|';
-    screen[rH + 5][cH + 10] = '-';
+    screen[rH + 5][cH + 4] = 'G';
+    screen[rH + 5][cH + 5] = 'A';
+    screen[rH + 5][cH + 6] = 'M';
+    screen[rH + 5][cH + 7] = 'B';
+    screen[rH + 5][cH + 8] = 'O';
+    screen[rH + 5][cH + 10] = '|';
     screen[rH + 5][cH + 11] = '-';
     screen[rH + 5][cH + 12] = '-';
-    screen[rH + 5][cH + 13] = 169;
-    screen[rH + 5][cH + 14] = 194;
-    screen[rH + 5][cH + 15] = 194;
-    screen[rH + 5][cH + 16] = 205;
-    screen[rH + 5][cH + 17] = 196;
-    screen[rH + 6][cH] = '/';
+    screen[rH + 5][cH + 13] = '-';
+    screen[rH + 5][cH + 14] = '-';
+    screen[rH + 6][cH + 0] = '/';
     screen[rH + 6][cH + 2] = '|';
     screen[rH + 6][cH + 3] = '_';
     screen[rH + 6][cH + 4] = '_';
@@ -48,21 +46,360 @@ void drawsingleBullet(unsigned char screen[][156], int rH, int cH)
     screen[rH + 6][cH + 6] = '_';
     screen[rH + 6][cH + 7] = '_';
     screen[rH + 6][cH + 8] = '_';
-    screen[rH + 6][cH + 9] = '|';
+    screen[rH + 6][cH + 9] = '_';
+    screen[rH + 6][cH + 10] = '|';
+    screen[rH + 7][cH + 3] = '|';
     screen[rH + 7][cH + 4] = '|';
-    screen[rH + 7][cH + 5] = '|';
-    screen[rH + 7][cH + 8] = '|';
-    screen[rH + 7][cH + 9] = '|';
-    screen[rH + 8][cH + 4] = 'M';
-    screen[rH + 8][cH + 5] = 'M';
-    screen[rH + 8][cH + 8] = 'M';
-    screen[rH + 8][cH + 9] = 'M';
-
+    screen[rH + 7][cH + 8] = '\\';
+    screen[rH + 7][cH + 9] = '\\';
+    screen[rH + 8][cH + 3] = '=';
+    screen[rH + 8][cH + 4] = '=';
+    screen[rH + 8][cH + 5] = '=';
+    screen[rH + 8][cH + 9] = '=';
+    screen[rH + 8][cH + 10] = '=';
+    screen[rH + 8][cH + 11] = '=';
 }
 
-void movesingleBullet()
+void drawHeromoveleftlegtor(unsigned char screen[][156], int rH, int cH)
 {
+    screen[rH][cH + 4] = '_';
+    screen[rH][cH + 5] = '_';
+    screen[rH][cH + 6] = '_';
+    screen[rH][cH + 7] = '_';
+    screen[rH][cH + 8] = '_';
+    screen[rH + 1][cH + 3] = '/';
+    screen[rH + 1][cH + 9] = '\\';
+    screen[rH + 2][cH + 2] = '|';
+    screen[rH + 2][cH + 4] = 'o';
+    screen[rH + 2][cH + 6] = '>';
+    screen[rH + 2][cH + 8] = 'o';
+    screen[rH + 2][cH + 10] = '|';
+    screen[rH + 3][cH + 2] = '|';
+    screen[rH + 3][cH + 5] = '-';
+    screen[rH + 3][cH + 6] = '-';
+    screen[rH + 3][cH + 10] = '|';
+    screen[rH + 4][cH + 1] = '\\';
+    screen[rH + 4][cH + 4] = '_';
+    screen[rH + 4][cH + 5] = '_';
+    screen[rH + 4][cH + 6] = '_';
+    screen[rH + 4][cH + 7] = '_';
+    screen[rH + 4][cH + 11] = '/';
+    screen[rH + 5][cH + 2] = '|';
+    screen[rH + 5][cH + 3] = '-';
+    screen[rH + 5][cH + 4] = '-';
+    screen[rH + 5][cH + 5] = '-';
+    screen[rH + 5][cH + 6] = '-';
+    screen[rH + 5][cH + 10] = '|';
+    screen[rH + 5][cH + 11] = '\\';
+    screen[rH + 6][cH + 2] = '|';
+    screen[rH + 6][cH + 3] = '_';
+    screen[rH + 6][cH + 4] = '_';
+    screen[rH + 6][cH + 5] = '_';
+    screen[rH + 6][cH + 6] = '_';
+    screen[rH + 6][cH + 7] = '_';
+    screen[rH + 6][cH + 8] = '_';
+    screen[rH + 6][cH + 9] = '_';
+    screen[rH + 6][cH + 10] = '|';
+    screen[rH + 6][cH + 12] = '\\';
+    screen[rH + 7][cH + 3] = '\\';
+    screen[rH + 7][cH + 4] = '\\';
+    screen[rH + 7][cH + 8] = '|';
+    screen[rH + 7][cH + 9] = '|';
+    screen[rH + 8][cH + 4] = '=';
+    screen[rH + 8][cH + 5] = '=';
+    screen[rH + 8][cH + 6] = '=';
+    screen[rH + 8][cH + 8] = '=';
+    screen[rH + 8][cH + 9] = '=';
+    screen[rH + 8][cH + 10] = '=';
+}
 
+void drawHerostandleft(unsigned char screen[][156], int rH, int cH)
+{
+    screen[rH][cH + 4] = '_';
+    screen[rH][cH + 5] = '_';
+    screen[rH][cH + 6] = '_';
+    screen[rH][cH + 7] = '_';
+    screen[rH][cH + 8] = '_';
+    screen[rH + 1][cH + 3] = '/';
+    screen[rH + 1][cH + 9] = '\\';
+    screen[rH + 2][cH + 2] = '|';
+    screen[rH + 2][cH + 4] = 'o';
+    screen[rH + 2][cH + 6] = '<';
+    screen[rH + 2][cH + 8] = 'o';
+    screen[rH + 2][cH + 10] = '|';
+    screen[rH + 3][cH + 2] = '|';
+    screen[rH + 3][cH + 5] = '-';
+    screen[rH + 3][cH + 6] = '-';
+    screen[rH + 3][cH + 10] = '|';
+    screen[rH + 4][cH + 1] = '\\';
+    screen[rH + 4][cH + 4] = '_';
+    screen[rH + 4][cH + 5] = '_';
+    screen[rH + 4][cH + 6] = '_';
+    screen[rH + 4][cH + 7] = '_';
+    screen[rH + 4][cH + 11] = '/';
+    screen[rH + 5][cH + 1] = '/';
+    screen[rH + 5][cH + 2] = '|';
+    screen[rH + 5][cH + 4] = 'G';
+    screen[rH + 5][cH + 5] = 'A';
+    screen[rH + 5][cH + 6] = 'M';
+    screen[rH + 5][cH + 7] = 'B';
+    screen[rH + 5][cH + 8] = 'O';
+    screen[rH + 5][cH + 10] = '|';
+    screen[rH + 5][cH + 11] = '\\';
+    screen[rH + 6][cH + 0] = '/';
+    screen[rH + 6][cH + 2] = '|';
+    screen[rH + 6][cH + 3] = '_';
+    screen[rH + 6][cH + 4] = '_';
+    screen[rH + 6][cH + 5] = '_';
+    screen[rH + 6][cH + 6] = '_';
+    screen[rH + 6][cH + 7] = '_';
+    screen[rH + 6][cH + 8] = '_';
+    screen[rH + 6][cH + 9] = '_';
+    screen[rH + 6][cH + 10] = '|';
+    screen[rH + 6][cH + 12] = '\\';
+    screen[rH + 7][cH + 3] = '|';
+    screen[rH + 7][cH + 4] = '|';
+    screen[rH + 7][cH + 8] = '|';
+    screen[rH + 7][cH + 9] = '|';
+    screen[rH + 8][cH + 2] = '=';
+    screen[rH + 8][cH + 3] = '=';
+    screen[rH + 8][cH + 4] = '=';
+    screen[rH + 8][cH + 7] = '=';
+    screen[rH + 8][cH + 8] = '=';
+    screen[rH + 8][cH + 9] = '=';
+}
+
+void drawHeromoverightlegtol(unsigned char screen[][156], int rH, int cH)
+{
+    screen[rH][cH + 4] = '_';
+    screen[rH][cH + 5] = '_';
+    screen[rH][cH + 6] = '_';
+    screen[rH][cH + 7] = '_';
+    screen[rH][cH + 8] = '_';
+    screen[rH + 1][cH + 3] = '/';
+    screen[rH + 1][cH + 9] = '\\';
+    screen[rH + 2][cH + 2] = '|';
+    screen[rH + 2][cH + 4] = 'o';
+    screen[rH + 2][cH + 6] = '<';
+    screen[rH + 2][cH + 8] = 'o';
+    screen[rH + 2][cH + 10] = '|';
+    screen[rH + 3][cH + 2] = '|';
+    screen[rH + 3][cH + 5] = '-';
+    screen[rH + 3][cH + 6] = '-';
+    screen[rH + 3][cH + 10] = '|';
+    screen[rH + 4][cH + 1] = '\\';
+    screen[rH + 4][cH + 4] = '_';
+    screen[rH + 4][cH + 5] = '_';
+    screen[rH + 4][cH + 6] = '_';
+    screen[rH + 4][cH + 7] = '_';
+    screen[rH + 4][cH + 11] = '/';
+    screen[rH + 5][cH + 1] = '/';
+    screen[rH + 5][cH + 2] = '|';
+    screen[rH + 5][cH + 6] = '-';
+    screen[rH + 5][cH + 7] = '-';
+    screen[rH + 5][cH + 8] = '-';
+    screen[rH + 5][cH + 9] = '-';
+    screen[rH + 5][cH + 10] = '|';
+    screen[rH + 6][cH + 0] = '/';
+    screen[rH + 6][cH + 2] = '|';
+    screen[rH + 6][cH + 3] = '_';
+    screen[rH + 6][cH + 4] = '_';
+    screen[rH + 6][cH + 5] = '_';
+    screen[rH + 6][cH + 6] = '_';
+    screen[rH + 6][cH + 7] = '_';
+    screen[rH + 6][cH + 8] = '_';
+    screen[rH + 6][cH + 9] = '_';
+    screen[rH + 6][cH + 10] = '|';
+    screen[rH + 7][cH + 3] = '|';
+    screen[rH + 7][cH + 4] = '|';
+    screen[rH + 7][cH + 8] = '/';
+    screen[rH + 7][cH + 9] = '/';
+    screen[rH + 8][cH + 2] = '=';
+    screen[rH + 8][cH + 3] = '=';
+    screen[rH + 8][cH + 4] = '=';
+    screen[rH + 8][cH + 6] = '=';
+    screen[rH + 8][cH + 7] = '=';
+    screen[rH + 8][cH + 8] = '=';
+}
+
+void drawHeromoveleftlegtol(unsigned char screen[][156], int rH, int cH)
+{
+    screen[rH][cH + 6] = '_';
+    screen[rH][cH + 7] = '_';
+    screen[rH][cH + 8] = '_';
+    screen[rH][cH + 9] = '_';
+    screen[rH][cH + 10] = '_';
+    screen[rH + 1][cH + 5] = '/';
+    screen[rH + 1][cH + 11] = '\\';
+    screen[rH + 2][cH + 4] = '|';
+    screen[rH + 2][cH + 6] = 'o';
+    screen[rH + 2][cH + 8] = '<';
+    screen[rH + 2][cH + 10] = 'o';
+    screen[rH + 2][cH + 12] = '|';
+    screen[rH + 3][cH + 4] = '|';
+    screen[rH + 3][cH + 7] = '-';
+    screen[rH + 3][cH + 8] = '-';
+    screen[rH + 3][cH + 12] = '|';
+    screen[rH + 4][cH + 3] = '\\';
+    screen[rH + 4][cH + 6] = '_';
+    screen[rH + 4][cH + 7] = '_';
+    screen[rH + 4][cH + 8] = '_';
+    screen[rH + 4][cH + 9] = '_';
+    screen[rH + 4][cH + 13] = '/';
+    screen[rH + 5][cH + 0] = '-';
+    screen[rH + 5][cH + 1] = '-';
+    screen[rH + 5][cH + 2] = '-';
+    screen[rH + 5][cH + 3] = '-';
+    screen[rH + 5][cH + 4] = '|';
+    screen[rH + 5][cH + 6] = 'G';
+    screen[rH + 5][cH + 7] = 'A';
+    screen[rH + 5][cH + 8] = 'M';
+    screen[rH + 5][cH + 9] = 'B';
+    screen[rH + 5][cH + 10] = 'O';
+    screen[rH + 5][cH + 12] = '|';
+    screen[rH + 5][cH + 13] = '\\';
+    screen[rH + 6][cH + 4] = '|';
+    screen[rH + 6][cH + 5] = '_';
+    screen[rH + 6][cH + 6] = '_';
+    screen[rH + 6][cH + 7] = '_';
+    screen[rH + 6][cH + 8] = '_';
+    screen[rH + 6][cH + 9] = '_';
+    screen[rH + 6][cH + 10] = '_';
+    screen[rH + 6][cH + 11] = '_';
+    screen[rH + 6][cH + 12] = '|';
+    screen[rH + 6][cH + 14] = '\\';
+    screen[rH + 7][cH + 5] = '/';
+    screen[rH + 7][cH + 6] = '/';
+    screen[rH + 7][cH + 10] = '|';
+    screen[rH + 7][cH + 11] = '|';
+    screen[rH + 8][cH + 3] = '=';
+    screen[rH + 8][cH + 4] = '=';
+    screen[rH + 8][cH + 5] = '=';
+    screen[rH + 8][cH + 9] = '=';
+    screen[rH + 8][cH + 10] = '=';
+    screen[rH + 8][cH + 11] = '=';
+}
+
+void drawHeroshoottor(unsigned char screen[][156], int rH, int cH)
+{
+    screen[rH][cH + 4] = '_';
+    screen[rH][cH + 5] = '_';
+    screen[rH][cH + 6] = '_';
+    screen[rH][cH + 7] = '_';
+    screen[rH][cH + 8] = '_';
+    screen[rH + 1][cH + 3] = '/';
+    screen[rH + 1][cH + 9] = '\\';
+    screen[rH + 2][cH + 2] = '|';
+    screen[rH + 2][cH + 4] = 'o';
+    screen[rH + 2][cH + 6] = '>';
+    screen[rH + 2][cH + 8] = 'x';
+    screen[rH + 2][cH + 10] = '|';
+    screen[rH + 3][cH + 2] = '|';
+    screen[rH + 3][cH + 5] = '-';
+    screen[rH + 3][cH + 6] = '-';
+    screen[rH + 3][cH + 10] = '|';
+    screen[rH + 4][cH + 1] = '\\';
+    screen[rH + 4][cH + 4] = '_';
+    screen[rH + 4][cH + 5] = '_';
+    screen[rH + 4][cH + 6] = '_';
+    screen[rH + 4][cH + 7] = '_';
+    screen[rH + 4][cH + 11] = '/';
+    screen[rH + 5][cH + 1] = '/';
+    screen[rH + 5][cH + 2] = '|';
+    screen[rH + 5][cH + 4] = 'G';
+    screen[rH + 5][cH + 5] = 'A';
+    screen[rH + 5][cH + 6] = 'M';
+    screen[rH + 5][cH + 7] = 'B';
+    screen[rH + 5][cH + 8] = 'O';
+    screen[rH + 5][cH + 10] = '|';
+    screen[rH + 5][cH + 11] = '-';
+    screen[rH + 5][cH + 12] = '-';
+    screen[rH + 5][cH + 13] = '-';
+    screen[rH + 5][cH + 14] = '-';
+    screen[rH + 5][cH + 15] = 194;
+    screen[rH + 5][cH + 16] = 194;
+    screen[rH + 5][cH + 17] = 196;
+    screen[rH + 6][cH + 0] = '/';
+    screen[rH + 6][cH + 2] = '|';
+    screen[rH + 6][cH + 3] = '_';
+    screen[rH + 6][cH + 4] = '_';
+    screen[rH + 6][cH + 5] = '_';
+    screen[rH + 6][cH + 6] = '_';
+    screen[rH + 6][cH + 7] = '_';
+    screen[rH + 6][cH + 8] = '_';
+    screen[rH + 6][cH + 9] = '_';
+    screen[rH + 6][cH + 10] = '|';
+    screen[rH + 7][cH + 3] = '|';
+    screen[rH + 7][cH + 4] = '|';
+    screen[rH + 7][cH + 8] = '|';
+    screen[rH + 7][cH + 9] = '|';
+    screen[rH + 8][cH + 3] = '=';
+    screen[rH + 8][cH + 4] = '=';
+    screen[rH + 8][cH + 5] = '=';
+    screen[rH + 8][cH + 8] = '=';
+    screen[rH + 8][cH + 9] = '=';
+    screen[rH + 8][cH + 10] = '=';
+}
+
+void drawHeroshoottol(unsigned char screen[][156], int rH, int cH)
+{
+    screen[rH][cH + 10] = '_';
+    screen[rH][cH + 11] = '_';
+    screen[rH][cH + 12] = '_';
+    screen[rH][cH + 13] = '_';
+    screen[rH][cH + 14] = '_';
+    screen[rH + 1][cH + 9] = '/';
+    screen[rH + 1][cH + 15] = '\\';
+    screen[rH + 2][cH + 8] = '|';
+    screen[rH + 2][cH + 10] = 'x';
+    screen[rH + 2][cH + 12] = '<';
+    screen[rH + 2][cH + 14] = 'o';
+    screen[rH + 2][cH + 16] = '|';
+    screen[rH + 3][cH + 8] = '|';
+    screen[rH + 3][cH + 11] = '-';
+    screen[rH + 3][cH + 12] = '-';
+    screen[rH + 3][cH + 16] = '|';
+    screen[rH + 4][cH + 7] = '\\';
+    screen[rH + 4][cH + 10] = '_';
+    screen[rH + 4][cH + 11] = '_';
+    screen[rH + 4][cH + 12] = '_';
+    screen[rH + 4][cH + 13] = '_';
+    screen[rH + 4][cH + 17] = '/';
+    screen[rH + 5][cH + 0] = 196;
+    screen[rH + 5][cH + 1] = 194;
+    screen[rH + 5][cH + 2] = 194;
+    screen[rH + 5][cH + 3] = '-';
+    screen[rH + 5][cH + 4] = '-';
+    screen[rH + 5][cH + 5] = '-';
+    screen[rH + 5][cH + 6] = '-';
+    screen[rH + 5][cH + 8] = '|';
+    screen[rH + 5][cH + 10] = 'G';
+    screen[rH + 5][cH + 11] = 'A';
+    screen[rH + 5][cH + 12] = 'M';
+    screen[rH + 5][cH + 13] = 'B';
+    screen[rH + 5][cH + 14] = 'O';
+    screen[rH + 5][cH + 16] = '|';
+    screen[rH + 5][cH + 17] = '\\';
+    screen[rH + 6][cH + 8] = '|';
+    screen[rH + 6][cH + 9] = '_';
+    screen[rH + 6][cH + 10] = '_';
+    screen[rH + 6][cH + 11] = '_';
+    screen[rH + 6][cH + 12] = '_';
+    screen[rH + 6][cH + 13] = '_';
+    screen[rH + 6][cH + 14] = '_';
+    screen[rH + 6][cH + 15] = '_';
+    screen[rH + 6][cH + 16] = '|';
+    screen[rH + 6][cH + 18] = '\\';
+    screen[rH + 7][cH + 9] = '|';
+    screen[rH + 7][cH + 10] = '|';
+    screen[rH + 7][cH + 14] = '|';
+    screen[rH + 7][cH + 15] = '|';
+    screen[rH + 8][cH + 8] = '=';
+    screen[rH + 8][cH + 9] = '=';
+    screen[rH + 8][cH + 10] = '=';
+    screen[rH + 8][cH + 13] = '=';
+    screen[rH + 8][cH + 14] = '=';
+    screen[rH + 8][cH + 15] = '=';
 }
 
 void timer(unsigned char screen[][156], int time)
@@ -134,7 +471,7 @@ void coutAllToScreen(unsigned char screen[][156])
 
 void MoveHelicopter(int& rHc, int& cHc)
 {
-    cHc++;
+    cHc+=8;
 }
 
 void DrawHelicopter(unsigned char screen[][156], int rHc, int cHc)
@@ -346,22 +683,19 @@ void DrawHelicopter(unsigned char screen[][156], int rHc, int cHc)
 
 
 
-void DrawHero(unsigned char screen[][156], int rH, int cH) // ch = 11 , rh = 32
+void DrawHerostandright(unsigned char screen[][156], int rH, int cH) // ch = 11 , rh = 32
 {
+    screen[rH][cH + 4] = '_';
     screen[rH][cH + 5] = '_';
     screen[rH][cH + 6] = '_';
     screen[rH][cH + 7] = '_';
     screen[rH][cH + 8] = '_';
     screen[rH + 1][cH + 3] = '/';
-    screen[rH + 1][cH + 4] = ' ';
-    screen[rH + 1][cH + 5] = ' ';
-    screen[rH + 1][cH + 6] = ' ';
-    screen[rH + 1][cH + 7] = ' ';
-    screen[rH + 1][cH + 8] = ' ';
     screen[rH + 1][cH + 9] = '\\';
     screen[rH + 2][cH + 2] = '|';
     screen[rH + 2][cH + 4] = 'o';
-    screen[rH + 2][cH + 6] = 'o';
+    screen[rH + 2][cH + 6] = '>';
+    screen[rH + 2][cH + 8] = 'o';
     screen[rH + 2][cH + 10] = '|';
     screen[rH + 3][cH + 2] = '|';
     screen[rH + 3][cH + 5] = '-';
@@ -372,12 +706,17 @@ void DrawHero(unsigned char screen[][156], int rH, int cH) // ch = 11 , rh = 32
     screen[rH + 4][cH + 5] = '_';
     screen[rH + 4][cH + 6] = '_';
     screen[rH + 4][cH + 7] = '_';
-    screen[rH + 4][cH + 10] = '/';
+    screen[rH + 4][cH + 11] = '/';
     screen[rH + 5][cH + 1] = '/';
     screen[rH + 5][cH + 2] = '|';
-    screen[rH + 5][cH + 9] = '|';
-    screen[rH + 5][cH + 10] = '\\'; //
-    screen[rH + 6][cH] = '/';
+    screen[rH + 5][cH + 4] = 'G';
+    screen[rH + 5][cH + 5] = 'A';
+    screen[rH + 5][cH + 6] = 'M';
+    screen[rH + 5][cH + 7] = 'B';
+    screen[rH + 5][cH + 8] = 'O';
+    screen[rH + 5][cH + 10] = '|';
+    screen[rH + 5][cH + 11] = '\\';
+    screen[rH + 6][cH + 0] = '/';
     screen[rH + 6][cH + 2] = '|';
     screen[rH + 6][cH + 3] = '_';
     screen[rH + 6][cH + 4] = '_';
@@ -385,16 +724,19 @@ void DrawHero(unsigned char screen[][156], int rH, int cH) // ch = 11 , rh = 32
     screen[rH + 6][cH + 6] = '_';
     screen[rH + 6][cH + 7] = '_';
     screen[rH + 6][cH + 8] = '_';
-    screen[rH + 6][cH + 9] = '|';
-    screen[rH + 6][cH + 11] = '\\'; //
+    screen[rH + 6][cH + 9] = '_';
+    screen[rH + 6][cH + 10] = '|';
+    screen[rH + 6][cH + 12] = '\\';
+    screen[rH + 7][cH + 3] = '|';
     screen[rH + 7][cH + 4] = '|';
-    screen[rH + 7][cH + 5] = '|';
     screen[rH + 7][cH + 8] = '|';
     screen[rH + 7][cH + 9] = '|';
-    screen[rH + 8][cH + 4] = 'M';
-    screen[rH + 8][cH + 5] = 'M';
-    screen[rH + 8][cH + 8] = 'M';
-    screen[rH + 8][cH + 9] = 'M';
+    screen[rH + 8][cH + 3] = '=';
+    screen[rH + 8][cH + 4] = '=';
+    screen[rH + 8][cH + 5] = '=';
+    screen[rH + 8][cH + 8] = '=';
+    screen[rH + 8][cH + 9] = '=';
+    screen[rH + 8][cH + 10] = '=';
 }
 
 void MoveHero(int& rH, int& cH, char Let)
@@ -432,19 +774,15 @@ void main()
         for (; !_kbhit();)
         {
             drawFlat(screen);
-            MoveHelicopter(rHc, cHc);
             DrawHelicopter(screen, rHc, cHc);
-            DrawHero(screen, rH, cH);
+            MoveHelicopter(rHc, cHc);
+            DrawHerostandright(screen, rH, cH);
             timer(screen, time);
             time++;
             coutAllToScreen(screen);
             system("cls");
         }
         Let = _getch();
-        if (Let == 'p')
-        {
-
-        }
         MoveHero(rH, cH, Let);
     }
 }

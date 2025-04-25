@@ -1,3 +1,3 @@
 ﻿  game.cpp
-C:\Users\seife\2D Ascii game project\game.cpp(64,6): warning C4326: return type of 'main' should be 'int' instead of 'void'
-  2D Ascii game project.vcxproj -> C:\Users\seife\2D Ascii game project\x64\Debug\2D Ascii game project.exe
+C:\Users\seife\2D-Ascii-game-project\game.cpp(762,6): warning C4326: return type of 'main' should be 'int' instead of 'void'
+  2D Ascii game project.vcxproj -> C:\Users\seife\2D-Ascii-game-project\x64\Debug\2D Ascii game project.exe
